@@ -1,0 +1,8 @@
+spool ./log.log;
+drop user qq cascade;
+create user qq identified by qq;
+grant connect,resource to qq;
+conn qq/qq;
+@@create.sql;
+@@insert.sql;
+spool off;
